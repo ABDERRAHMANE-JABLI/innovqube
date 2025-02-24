@@ -30,6 +30,8 @@ class BookingButton extends Component
     ]);
 
     session()->flash('message', 'Réservation effectuée avec succès !');
+    $this->dispatch('bookingMade');
+
     }
 
     public function render()
